@@ -225,11 +225,11 @@ include_once("include/config.inc.php");
                   <div class="d-flex align-items-center">
                     <div class="subheader">ยอดทั้งหมด</div>
                     <div class="ms-auto lh-1">
-                      <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">26/08/2564</a>
+                      <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">27/08/2564</a>
                     </div>
                   </div>
                   <div class="h1 mb-3">
-                    <h2 id="total260864">00</h2>
+                    <h2 id="total270864">00</h2>
                   </div>
                   <div class="d-flex mb-2">
                     <div>ความคืบหน้าการส่ง</div>
@@ -262,7 +262,7 @@ include_once("include/config.inc.php");
                     </div>
                   </div>
                   <div class="h1 mb-3">
-                    <h2 id="total270864">00</h2>
+                    <h2 id="total270864plus">00</h2>
                   </div>
                   <div class="d-flex mb-2">
                     <div>ความคืบหน้าการส่ง</div>
@@ -295,7 +295,7 @@ include_once("include/config.inc.php");
                     </div>
                   </div>
                   <div class="h1 mb-3">
-                    <h2 id="resend270864">00</h2>
+                    <h2 id="resend27086plus">00</h2>
                   </div>
                   <div class="d-flex mb-2">
                     <div>ความคืบหน้าการส่ง</div>
