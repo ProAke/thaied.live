@@ -1,8 +1,8 @@
 <?php 
 include_once("include/config.inc.php");
 
-$tb1 = 'tb_mail_sendnew';
-$folder="../cer/resend/".$_GET['fd'];
+$tb1 = 'tb_mail_new27';
+$folder="../cer/".$_GET['fd'];
 
 
 

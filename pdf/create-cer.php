@@ -24,12 +24,11 @@ $mpdf->useDictionaryLBR = false;
 $mpdf->SetImportUse();
 $mpdf->SetDocTemplate('template/e-cer4.pdf', true);
 
-$fullname=str_replace('-', '.', $fullname);
+
 $words = $segment->get_segment_array($fullname);
 $text = implode("",$words);
 
 $text2 = str_replace('#', '_', $fullname);
-$text = str_replace('*', '.', $text);
 $text = str_replace('#', '&#32;&#32;', $text);
 $Contents ='
 <div style="font-family: thsarabunpsk;position: absolute;top:41%;left:0px;font-size:28pt;font-weight:bold;text-align:center;width:100%;">'.$text.'</div>

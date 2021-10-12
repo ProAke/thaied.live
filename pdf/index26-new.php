@@ -4,12 +4,9 @@ include_once("include/config.inc.php");
 $tb1 = 'tb_mail_new26';
 $folder="../cer/".$_GET['fd'];
 
-$from ="2021-09-10";
-$to = "2021-09-13";
 
-$sql = "SELECT * FROM `".$tb1."` WHERE (`status`='1') AND  `send_stamp` between '".$from."' AND '".$to."'";
 
-//$sql = "SELECT * FROM `".$tb1."` WHERE (`active`='0') AND (no= ".$_GET['no'].")";
+$sql = "SELECT * FROM `".$tb1."` WHERE (`active`='0') AND (no= ".$_GET['no'].")";
 
 $query = $conn->query($sql) or die($conn->error);
 $i=0;

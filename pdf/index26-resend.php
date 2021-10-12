@@ -2,7 +2,7 @@
 include_once("include/config.inc.php");
 
 $tb1 = 'tb_mail_new26';
-$folder="../cer/26082564";
+$folder="../cer/".$_GET['fd'];
 
 $from ="2021-09-10";
 $to = "2021-09-13";
@@ -15,6 +15,9 @@ $query = $conn->query($sql) or die($conn->error);
 $i=0;
 while($line = $query->fetch_assoc())
 {
+
+
+
 
 if($line['lname']!=""){
 

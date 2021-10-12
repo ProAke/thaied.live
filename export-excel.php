@@ -5,10 +5,7 @@ include_once("include/config.inc.php");
 if($_GET['day']=='27082564'){$tb1 = 'tb_mail_new27';}
 if($_GET['day']=='26082564'){$tb1 = 'tb_mail_new26';}
 
-//$sql = "SELECT * FROM `".$tb1."` WHERE (no>= ".$_GET['start'].") AND (no<= ".$_GET['end'].")";
-$sql = "SELECT * FROM `tb_mail_new26_resend` WHERE (`status_json` LIKE '%2021-09-25%') OR (`status_json` LIKE '%2021-09-26%') ";
-
-
+$sql = "SELECT * FROM `".$tb1."` WHERE (no>= ".$_GET['start'].") AND (no<= ".$_GET['end'].")";
 //$sql = "SELECT * FROM `".$tb1."`";
 $query = $conn->query($sql) or die($conn->error);
 

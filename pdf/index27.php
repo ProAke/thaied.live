@@ -1,12 +1,12 @@
 <?php 
 include_once("include/config.inc.php");
 
-$tb1 = 'tb_mail_rerun';
-$folder="../cer/rerun";
+$tb1 = 'tb_mail_new27';
+$folder="../cer/".$_GET['fd'];
 
 
 
-$sql = "SELECT * FROM `".$tb1."` WHERE (`active`='1') AND (`status`='0') AND  (no>= ".$_GET['start'].") AND (no<= ".$_GET['end'].")";
+$sql = "SELECT * FROM `".$tb1."` WHERE (`active`='0') AND (no>= ".$_GET['start'].") AND (no<= ".$_GET['end'].")";
 
 $query = $conn->query($sql) or die($conn->error);
 $i=0;
