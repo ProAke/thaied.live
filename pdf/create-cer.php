@@ -1,12 +1,11 @@
-<?php 
+<?php
 include_once("include/config.inc.php");
 
 
-$folder="../cer/create";
+$folder = "../cer/create";
 
 
-
-$fullname = $_GET['f']."#".$_GET['l'];
+$fullname = $_GET['f'] . "#" . $_GET['l'];
 require_once __DIR__ . '/vendor/autoload.php';
 require_once('THSplitLib/segment.php');
 $segment = new Segment();
@@ -26,19 +25,18 @@ $mpdf->SetDocTemplate('template/e-cer4.pdf', true);
 
 
 $words = $segment->get_segment_array($fullname);
-$text = implode("",$words);
+$text = implode("", $words);
 
 $text2 = str_replace('#', '_', $fullname);
 $text = str_replace('#', '&#32;&#32;', $text);
-$Contents ='
-<div style="font-family: thsarabunpsk;position: absolute;top:41%;left:0px;font-size:28pt;font-weight:bold;text-align:center;width:100%;">'.$text.'</div>
+$Contents = '
+<div style="font-family: thsarabunpsk;position: absolute;top:41%;left:0px;font-size:28pt;font-weight:bold;text-align:center;width:100%;">' . $text . '</div>
 ';
 $mpdf->WriteHTML($Contents);
 
-$NewFile = "ใบเกียรติบัตร-".$text2;
-$mpdf->Output($folder.'/'.$NewFile.'.pdf','F');
+$NewFile = "ใบเกียรติบัตร-" . $text2;
+$mpdf->Output($folder . '/' . $NewFile . '.pdf', 'F');
 //$mpdf->Output();
 
-header('Location: https://www.thaied.live/cer/create/'.$NewFile.'.pdf');
+header('Location: https://www.thaied.live/cer/create/' . $NewFile . '.pdf');
 exit;
-?>
